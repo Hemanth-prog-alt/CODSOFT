@@ -11,6 +11,7 @@
             padding:0;
             box-sizing:border-box;
             font-family:'Segoe UI', sans-serif;
+            scroll-behavior:smooth;
         }
 
         body{
@@ -21,16 +22,14 @@
 
         header{
             background:linear-gradient(135deg,#111827,#1e293b);
-            color:white;
             text-align:center;
-            padding:60px 20px;
+            padding:70px 20px;
             border-bottom:3px solid #38bdf8;
         }
 
         header h1{
-            font-size:42px;
+            font-size:44px;
             margin-bottom:10px;
-            color:#ffffff;
         }
 
         header p{
@@ -65,6 +64,8 @@
 
         .about img{
             width:250px;
+            height:250px;
+            object-fit:cover;
             border-radius:15px;
             border:4px solid #38bdf8;
         }
@@ -89,6 +90,11 @@
             padding:12px 22px;
             border-radius:30px;
             font-weight:bold;
+            transition:0.3s;
+        }
+
+        .skills li:hover{
+            transform:scale(1.05);
         }
 
         .projects{
@@ -102,12 +108,12 @@
             padding:25px;
             border-radius:15px;
             box-shadow:0 10px 20px rgba(0,0,0,0.25);
-            transition:0.3s ease;
             border-left:5px solid #38bdf8;
+            transition:0.3s ease;
         }
 
         .project-card:hover{
-            transform:translateY(-8px);
+            transform:translateY(-10px);
         }
 
         .project-card h3{
@@ -131,6 +137,7 @@
             border-radius:8px;
             font-weight:bold;
             transition:0.3s;
+            display:inline-block;
         }
 
         .resume a:hover{
@@ -167,7 +174,7 @@
         <p>Web Developer | Python Programmer | Student</p>
     </header>
 
-    <section>
+    <section id="about">
         <h2>About Me</h2>
         <div class="about">
             <img src="photo.jpeg" alt="Hemanth Kumar">
@@ -203,27 +210,27 @@
 
             <div class="project-card">
                 <h3>Calculator App</h3>
-                <p>A simple calculator built using HTML, CSS, and JavaScript.</p>
+                <p>Simple calculator using HTML, CSS, and JavaScript.</p>
             </div>
 
             <div class="project-card">
                 <h3>Landing Page</h3>
-                <p>A responsive business landing page design.</p>
+                <p>Responsive business landing page design.</p>
             </div>
 
             <div class="project-card">
                 <h3>ARMIS</h3>
-                <p>Army Resource Managemnt System using pythontkinter and sql.</p>
+                <p>Army Resource Management System using Python Tkinter and SQL.</p>
             </div>
 
             <div class="project-card">
-                <h3>Hospital management system</h3>
-                <p>Developed a Hospital Management System using C programming to manage hospital operations efficiently.</p>
+                <h3>Hospital Management System</h3>
+                <p>Developed using C programming to manage hospital operations efficiently.</p>
             </div>
 
             <div class="project-card">
                 <h3>Client-Server File Transfer System</h3>
-                <p>Developed a Python-based client-server file transfer application using socket programming.</p>
+                <p>Python socket programming based file transfer system.</p>
             </div>
 
         </div>
@@ -231,7 +238,7 @@
 
     <section class="resume">
         <h2>Resume</h2>
-        <a href="Resume.pdf" download>Download Resume</a>
+        <a href="resume.pdf" download>Download Resume</a>
     </section>
 
     <section class="contact">
