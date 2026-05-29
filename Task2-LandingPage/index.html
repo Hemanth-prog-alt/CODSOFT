@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CreativeBrand | Professional Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    color:white;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+header h1{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:28px;
+    font-size:16px;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#3b82f6;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:120px 20px 60px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-content h2{
+    font-size:60px;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:35px;
+    opacity:0.95;
+}
+
+.hero-content button{
+    padding:16px 38px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#2563eb;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 8px 25px rgba(255,255,255,0.25);
+}
+
+.hero-content button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(255,255,255,0.35);
+}
+
+/* Features */
+.features{
+    padding:100px 60px;
+    background:white;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:60px;
+    font-weight:700;
+}
+
+.feature-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.box{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+    border:1px solid #e2e8f0;
+}
+
+.box:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(37,99,235,0.15);
+}
+
+.box h3{
+    margin-bottom:15px;
+    color:#2563eb;
+    font-size:24px;
+}
+
+/* About */
+.about{
+    padding:100px 60px;
+    background:#f1f5f9;
+    text-align:center;
+}
+
+.about p{
+    max-width:900px;
+    margin:20px auto;
+    font-size:18px;
+    color:#475569;
+}
+
+/* CTA */
+.contact{
+    padding:100px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#1e3a8a,#6d28d9);
+    color:white;
+}
+
+.contact h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.contact button{
+    padding:16px 36px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#2563eb;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact button:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+footer{
+    background:#0f172a;
+    color:#cbd5e1;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav{
+        margin-top:15px;
+    }
+
+    nav a{
+        margin:0 10px;
+    }
+
+    .hero-content h2{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:17px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CreativeBrand</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Build Stunning Websites That Inspire</h2>
+        <p>
+            Create elegant, responsive, and high-performance websites 
+            with modern design principles that help your brand stand out.
+        </p>
+        <button>Get Started</button>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <h2 class="section-title">Why Choose Us</h2>
+
+    <div class="feature-boxes">
+        <div class="box">
+            <h3>Responsive Design</h3>
+            <p>Optimized for seamless viewing across mobile, tablet, and desktop devices.</p>
+        </div>
+
+        <div class="box">
+            <h3>Modern Interface</h3>
+            <p>Clean, elegant, and professional designs built for today’s digital standards.</p>
+        </div>
+
+        <div class="box">
+            <h3>Easy Customization</h3>
+            <p>Flexible layouts and styling options tailored to your business goals.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">About CreativeBrand</h2>
+    <p>
+        We empower businesses and developers to create exceptional digital experiences 
+        through professional web design solutions and modern development practices.
+    </p>
+    <p>
+        Our mission is to simplify website creation while maintaining quality, 
+        innovation, and performance excellence.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Start Building Today</h2>
+    <p>Transform your ideas into professional digital experiences.</p>
+    <button>Contact Us</button>
+</section>
+
+<footer>
+    <p>© 2026 CreativeBrand. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
